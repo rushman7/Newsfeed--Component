@@ -49,6 +49,23 @@
   overflow: hidden;
   box-shadow: 2px 2px 2px lightgrey;
 }
+.article button {
+  position: absolute;
+  right: 0;
+  margin: 5px 5px 0px 0px;
+  background-color: #388E3C;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 60px;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 7px;
+}
+.article button:hover {
+  background-color: #e72f17;
+  color: white;
+}
 .article h2 {
   font-size: 28px;
   padding: 0;
@@ -75,6 +92,9 @@
 }
 .article-open {
   height: 400px;
+}
+.none {
+  display: none;
 }
 .menu-button {
   position: absolute;

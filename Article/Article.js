@@ -139,6 +139,7 @@ function lambdaNewsfeed(data) {
   let p2 = document.createElement('p');
   let p3 = document.createElement('p');
   let span = document.createElement('span');
+  let close = document.createElement('button');
 
   span.classList.add('expandButton');
   div.classList.add('article');
@@ -148,12 +149,17 @@ function lambdaNewsfeed(data) {
     div.classList.toggle('article-open');
   })
 
+  close.addEventListener('click', () => {
+    div.classList.toggle('none');
+  })
+
   h2.textContent = data.title;
   p.textContent = data.date;
   p1.textContent = data.firstParagraph;
   p2.textContent = data.secondParagraph;
   p3.textContent = data.thirdParagraph;
   span.textContent = 'Expand';
+  close.textContent = 'Close';
 
   div.appendChild(h2);
   div.appendChild(p);
@@ -161,6 +167,8 @@ function lambdaNewsfeed(data) {
   div.appendChild(p2);
   div.appendChild(p3);
   div.appendChild(span);
+  div.prepend(close);
+  console.log(div);
   return div;
 }
 
