@@ -112,3 +112,26 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+
+// let container = document.querySelector('.articles');
+
+function lambdaNewsfeed(data) {
+  let div = document.createElement('div');
+  let h2 = document.createElement('h2');
+  let p = document.createElement('p');
+  let p1 = document.createElement('p');
+  let p2 = document.createElement('p');
+  let p3 = document.createElement('p');
+  let span = document.createElement('span');
+  span.classList.add('expandButton')
+  div.classList.add('article')
+  div.appendChild(h2);
+  div.appendChild(p);
+  div.appendChild(p1);
+  div.appendChild(p2);
+  div.appendChild(p3);
+  div.appendChild(span);
+  console.log(div)
+}
+
+lambdaNewsfeed()
